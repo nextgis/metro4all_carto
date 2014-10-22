@@ -5,7 +5,7 @@ Openstreetmap map style from metro4all project for tilemill / mapnik
 
 Tilemill Map style cloned from osm-bright for site metro4all.ru with metro / subway/ lightrail features.
 
-Main diffirences:
+Main diffirences from osm-bright:
 
  * Metro platforms and pedestrian subways highlited.
  * Addr:housenumbers
