@@ -3,7 +3,7 @@ metro4all_carto
 
 Openstreetmap map style from metro4all project for tilemill / mapnik
 
-Tilemill Map style cloned from osm-bright for site metro4all.ru with metro / subway/ lightrail features.
+Tilemill Map style cloned from osm-bright for site metro4all.ru with metro / subway/ ligh trail features.
 
 Main diffirences from osm-bright:
 
