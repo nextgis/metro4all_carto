@@ -13,3 +13,8 @@ Main diffirences from osm-bright:
  * More attention for pedestrians: Highways for cars marked by only one color, footways are more remarkable.
  * addr:highway rendering
  
+
+## icons copyrights
+* [licensename] from nicolasmollet
+* public domain from thenounproject
+* public domain aisa from wikimedia
