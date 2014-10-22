@@ -12,6 +12,12 @@ Main diffirences from osm-bright:
  * Main POIs for typical metro residents: shops=* and amenity=* (withouth car features)
  * More attention for pedestrians: Highways for cars marked by only one color, footways are more remarkable.
  * addr:highway rendering
+  
+## Installation
+
+This folder is a tilemill project. Just put it to ~/Documents/tilemill/projects/
+
+### More detailed installation
  
 
 ## icons copyrights
