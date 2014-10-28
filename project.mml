@@ -1228,7 +1228,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "( SELECT way,  name, shop \n  FROM planet_osm_point\n  WHERE shop IS NOT NULL AND shop NOT IN ('kiosk','car_parts','car','car_repair')\n\nUNION\nSELECT ST_PointOnSurface(way) AS way,  name, shop \n  FROM planet_osm_polygon\n  WHERE shop IS NOT NULL  AND shop NOT IN ('kiosk','car_parts','car','car_repair')\n) AS data",
+        "table": "( SELECT way,  COALESCE (operator, name) AS name, shop \n  FROM planet_osm_point\n  WHERE shop IS NOT NULL AND shop NOT IN ('kiosk','car_parts','car','car_repair')\n\nUNION\nSELECT ST_PointOnSurface(way) AS way,  COALESCE (operator, name) AS name, shop \n  FROM planet_osm_polygon\n  WHERE shop IS NOT NULL  AND shop NOT IN ('kiosk','car_parts','car','car_repair')\n) AS data",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",

@@ -135,7 +135,7 @@ line-color:  @road_fill;
 }
 
 
-#amenity {
+#amenity[zoom>15] {
 [amenity='bank'] {
     marker-width:32;
     marker-file:url('img_m4all/nicolasmollet/bank_euro.png'); 
@@ -237,7 +237,7 @@ line-color:  @road_fill;
  	 marker-file:url('img_m4all/aiga/Aiga_bus_inv.svg'); 
     }
   }
-#amenity[zoom>10]  {
+#amenity[zoom>16]  {
 
 	[amenity='bank']
     ,[amenity='atm']
