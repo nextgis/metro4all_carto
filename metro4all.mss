@@ -259,14 +259,14 @@ line-color:  @road_fill;
     ,[amenity='bus_station'] 
     {
   
- //Подписи магазинов
+ //Подписи amenity
  text-face-name:@sans;
  text-fill: #aaaaaa * 0.6;
  text-halo-radius: 1.5;
  text-size: 9;
  text-name: "[name]";
  text-halo-fill: #fff;
- text-allow-overlap:false;
+ text-allow-overlap:true;
  text-dx: 10;
  text-placement-type: simple;
   

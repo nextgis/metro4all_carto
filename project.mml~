@@ -21,7 +21,8 @@
     "base.mss",
     "roads.mss",
     "labels.mss",
-    "rails.mss"
+    "rails.mss",
+    "amenity"
   ],
   "Layer": [
     {
@@ -1256,7 +1257,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(  SELECT way, COALESCE (operator, name) AS name, amenity \n  FROM planet_osm_point\n  WHERE amenity IS NOT NULL \n\nUNION\nSELECT ST_PointOnSurface(way) AS way, COALESCE(operator, name) AS name, amenity \n  FROM planet_osm_polygon\n  WHERE amenity IS NOT NULL\n) AS data",
+        "table": "( SELECT way,  name, amenity \n  FROM planet_osm_point\n  WHERE amenity IS NOT NULL\n\nUNION\nSELECT ST_PointOnSurface(way) AS way,  name, amenity \n  FROM planet_osm_polygon\n  WHERE amenity IS NOT NULL\n) AS data",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -1265,10 +1266,7 @@
         "host": "localhost",
         "port": "5432",
         "user": "trolleway",
-        "password": "16208",
-        "id": "amenity",
-        "project": "metro4all_cartostyle",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+        "password": "16208"
       },
       "id": "amenity",
       "class": "",
@@ -1282,5 +1280,5 @@
   "metatile": 2,
   "attribution": "Data © OpenStreetMap (and) contributors, CC-BY-SA",
   "description": "",
-  "name": "metro4all_cartostyle"
+  "name": "project29 variant3"
 }
