@@ -19,7 +19,7 @@ This folder is a tilemill project. Just put it to ~/Documents/tilemill/projects/
 
 ### More detailed installation
 
-* install a [tilemill_version]_dev, or compile.
+* install a [tilemill_version]_dev, or compile it from source.
 * git clone this [EXPLAIN]
 * download shapefiles from osm-bright installation [EXPLAIN]
 * run osm2pgsql [EXPLAIN]
