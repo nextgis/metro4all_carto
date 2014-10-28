@@ -1107,7 +1107,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "( SELECT way,  name \n  FROM planet_osm_point\n  WHERE highway='bus_stop' OR railway='tram_stop' \n) AS data",
+        "table": "( SELECT way,  name \n  FROM planet_osm_point\n  WHERE highway='bus_stop'\n) AS data",
         "key_field": "",
         "geometry_field": "way",
         "extent_cache": "auto",
@@ -1127,6 +1127,34 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "bus_stops"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -1.1149989019488038,
+        50.94101576998812,
+        38.48192315176172,
+        56.165798765072246
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "( SELECT way,  name \n  FROM planet_osm_point\n  WHERE railway='tram_stop' \n) AS data",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-124121.11,6610866.72,4283788.09,7591492.55",
+        "dbname": "gis",
+        "host": "localhost",
+        "port": "5432",
+        "user": "trolleway",
+        "password": "16208"
+      },
+      "id": "tram_stops",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "tram_stops"
     },
     {
       "geometry": "point",
