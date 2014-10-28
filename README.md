@@ -24,6 +24,8 @@ This folder is a tilemill project. Just put it to ~/Documents/tilemill/projects/
 * download shapefiles from osm-bright installation [EXPLAIN]
 * get OSM extract (for subway https://mapzen.com/metro-extracts/)
 * run osm2pgsql [EXPLAIN]
+	osm2pgsql --create --multi-geometry --database gis --username trolleway  --style metro4all.style RU-MOW.osm.pbf 		#create
+	osm2pgsql --append --multi-geometry --database gis --username trolleway  --style metro4all.style london_england.osm.pbf		#append
 * change database credentials in project.mml An this tool is recommended: [LINK]
 * Run tilemill
 * Recalculate layer extents
