@@ -3,9 +3,11 @@ metro4all_carto
 
 Openstreetmap map style from metro4all project for tilemill / mapnik
 
-Tilemill Map style cloned from osm-bright for site metro4all.ru with metro / subway/ ligh trail features.
+![current image](https://raw.github.com/nextgis/metro4all_cartostyle/master/metro4all_carto_latest_kurok.png)
 
-Main diffirences from osm-bright:
+Tilemill Map style cloned from osm-bright for site metro4all.ru with metro / subway / ligh trail features.
+
+## Main diffirences from osm-bright:
 
  * Metro platforms and pedestrian subways highlited.
  * Addr:housenumbers
@@ -19,14 +21,43 @@ This folder is a tilemill project. Just put it to ~/Documents/tilemill/projects/
 
 ### More detailed installation
 
-* install a [tilemill_version]_dev, or compile it from source.
-* git clone this [EXPLAIN]
-* download shapefiles from osm-bright installation [EXPLAIN]
-* get OSM extract (for subway https://mapzen.com/metro-extracts/)
-* run osm2pgsql [EXPLAIN]
+Install a TileMill 0.10.2-dev, or build it from source. See the https://www.mapbox.com/tilemill/ for info.
+
+Clone this map style
+
+   cd ~/Documents/MapBox/project
+   git clone https://github.com/nextgis/metro4all_cartostyle.git
+
+####  Download shapefiles
+
+OSM Bright depends on two large shapefiles. You will need to download and extract them before continuing. 
+
+Download them to the `shp` directory in the osm-bright folder. You can do this with `wget` like:
+
+    wget http://data.openstreetmapdata.com/simplified-land-polygons-complete-3857.zip
+    wget http://data.openstreetmapdata.com/land-polygons-split-3857.zip
+
+Once downloaded, extract them from their zip files. 
+
+#### Run the shapefiles through shapeindex
+
+Shapeindex is a tool that improves performance for shapefiles in Tilemill. 
+
+Mac and Linux users already have Shapeindex installed through Tilemill but Windows users will need to download [Shapeindex for Windows][] before continuing. 
+
+To run Shapeindex on Mac and Linux, go to the terminal, move to the shp directory of osm-bright, run shapeindex in each shp subdirectory like: 
+
+shapeindex land-polygons-split-3857.shp
+
+[Shapeindex for Windows]: http://mapnik.s3.amazonaws.com/dist/archive/shapeindex-2.2.0-win-x86_32.zip
+
+
+
+* get OSM extract in osm or pbf formats (for subway: https://mapzen.com/metro-extracts/)
+* Import OSM into PostGIS 
 	osm2pgsql --create --multi-geometry --database gis --username trolleway  --style metro4all.style RU-MOW.osm.pbf 		#create
-	osm2pgsql --create --multi-geometry --database gis --username trolleway  --style metro4all.style london_england.osm.pbf		#append
-* change database credentials in project.mml An this tool is recommended: [LINK]
+	osm2pgsql --append --multi-geometry --database gis --username trolleway  --style metro4all.style london_england.osm.pbf		#append
+* change database credentials in ~/Documents/tilemill/projects/metro4all_cartostyle/project.mml An this tool is recommended: http://stevage.github.io/tilemill-portability/
 * Run tilemill
 * Recalculate layer extents
  

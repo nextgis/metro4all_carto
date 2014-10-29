@@ -21,14 +21,19 @@ This folder is a tilemill project. Just put it to ~/Documents/tilemill/projects/
 
 ### More detailed installation
 
-* install a [tilemill_version]_dev, or compile it from source.
-* git clone this [EXPLAIN]
-* download shapefiles from osm-bright installation [EXPLAIN]
-* get OSM extract (for subway https://mapzen.com/metro-extracts/)
-* run osm2pgsql [EXPLAIN]
+Install a TileMill 0.10.2-dev, or build it from source. See the https://www.mapbox.com/tilemill/ for info.
+
+Clone this map style
+
+   cd ~/Documents/MapBox/project
+   git clone https://github.com/nextgis/metro4all_cartostyle.git
+
+
+* get OSM extract in osm or pbf formats (for subway: https://mapzen.com/metro-extracts/)
+* Import OSM into PostGIS 
 	osm2pgsql --create --multi-geometry --database gis --username trolleway  --style metro4all.style RU-MOW.osm.pbf 		#create
 	osm2pgsql --append --multi-geometry --database gis --username trolleway  --style metro4all.style london_england.osm.pbf		#append
-* change database credentials in project.mml An this tool is recommended: [LINK]
+* change database credentials in ~/Documents/tilemill/projects/metro4all_cartostyle/project.mml An this tool is recommended: http://stevage.github.io/tilemill-portability/
 * Run tilemill
 * Recalculate layer extents
  
