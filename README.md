@@ -3,9 +3,11 @@ metro4all_carto
 
 Openstreetmap map style from metro4all project for tilemill / mapnik
 
-Tilemill Map style cloned from osm-bright for site metro4all.ru with metro / subway/ ligh trail features.
+![current image](https://raw.github.com/nextgis/metro4all_cartostyle/master/metro4all_carto_latest_kurok.png)
 
-Main diffirences from osm-bright:
+Tilemill Map style cloned from osm-bright for site metro4all.ru with metro / subway / ligh trail features.
+
+## Main diffirences from osm-bright:
 
  * Metro platforms and pedestrian subways highlited.
  * Addr:housenumbers
