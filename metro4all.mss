@@ -206,7 +206,7 @@ line-color:  @road_fill;
  	 marker-file:url('img_m4all/nicolasmollet/theater.png'); 
     }
   
-  /* СОЦИОБЛЯДИ НЕ НУЖНЫ
+  /* НЕ НУЖНЫ (никто не знает что это такое, и как это обозначить на иконке)
               [amenity='nightclub'] {
     marker-width:32;
  	 marker-file:url('img_m4all/nicolasmollet/test.png'); 
