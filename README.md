@@ -5,7 +5,7 @@ Openstreetmap map style from metro4all project for tilemill / mapnik
 
 ![current image](https://raw.github.com/nextgis/metro4all_cartostyle/master/metro4all_carto_latest_kurok.png)
 
-Tilemill Map style cloned from osm-bright for site metro4all.ru with metro / subway / ligh trail features.
+Tilemill Map style cloned from osm-bright for site metro4all.ru with metro / subway / light rail features.
 
 ## Main diffirences from osm-bright:
 
