@@ -121,6 +121,7 @@ line-color:  @road_fill;
   polygon-fill:@primary_fill;
 }
 
+//SHOPS
 
 #shops[zoom>15] {
   marker-width:25;
@@ -141,8 +142,12 @@ line-color:  @road_fill;
  text-placement-type: simple;
 }
 
+//AMENITIS
 
 #amenity[zoom>15] {
+  
+  //BANKS
+  
 [amenity='bank'] {
     marker-width:32;
     marker-file:url('img_m4all/nicolasmollet/bank_euro.png'); 
@@ -152,8 +157,8 @@ line-color:  @road_fill;
   	marker-file:url('img_m4all/nicolasmollet/atm_euro.png');
     }
   
-  
   // FOOD
+  
     [amenity='fast_food'] {
     marker-width:32;
  	 marker-file:url('img_m4all/nicolasmollet/fastfood.png'); 
@@ -180,7 +185,8 @@ line-color:  @road_fill;
     }
   
   
-  //hospitals
+  //HOSPIALS
+  
       [amenity='hospital'] {
     marker-width:32;
  	 marker-file:url('img_m4all/nicolasmollet/hospital-building.png'); 
