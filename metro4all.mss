@@ -67,8 +67,8 @@ line-color:  @road_fill;
 }
 
 
-#platforms,#platforms_line2buffers[zoom>=14]{
-    polygon-fill: #ff5555;
+#platforms, #platforms_line2buffers[zoom>=14]{
+    polygon-fill: #cf6767; 
   }
 
 #tunnel_footways[zoom>15] {
