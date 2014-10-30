@@ -142,75 +142,97 @@ line-color:  @road_fill;
  text-placement-type: simple;
 }
 
+
+// Size variables. nicolasmollet icons
+@iconsize_nm_15:20;
+@iconsize_nm_16:32;
+// Size variables. aiga icons
+@iconsize_aiga_15:20;
+@iconsize_aiga_16:32;
+
+
 //AMENITIS
+
+
 
 #amenity[zoom>15] {
   
   //BANKS
   
 [amenity='bank'] {
-    marker-width:32;
     marker-file:url('img_m4all/nicolasmollet/bank_euro.png'); 
+    [zoom>15] { marker-width:@iconsize_nm_15;}
+    [zoom>16] { marker-width:@iconsize_nm_16;}  
     }
+  
  [amenity='atm'] {
-    marker-width:32;
   	marker-file:url('img_m4all/nicolasmollet/atm_euro.png');
+    [zoom>15] { marker-width:@iconsize_nm_15;}
+    [zoom>16] { marker-width:@iconsize_nm_16;}   
     }
   
   // FOOD
   
-    [amenity='fast_food'] {
-    marker-width:32;
- 	 marker-file:url('img_m4all/nicolasmollet/fastfood.png'); 
+  [amenity='fast_food'] {
+ 	marker-file:url('img_m4all/nicolasmollet/fastfood.png'); 
+    [zoom>15] { marker-width:@iconsize_nm_15;}
+    [zoom>16] { marker-width:@iconsize_nm_16;}  
     }
-      [amenity='restaurant'] {
-    marker-width:32;
- 	 marker-file:url('img_m4all/nicolasmollet/restaurant.png'); 
+  
+  [amenity='restaurant'] {
+    marker-file:url('img_m4all/nicolasmollet/restaurant.png'); 
+    [zoom>15] { marker-width:@iconsize_nm_15;}
+    [zoom>16] { marker-width:@iconsize_nm_16;}  
     }
-      [amenity='cafe'] {
-    marker-width:32;
- 	 marker-file:url('img_m4all/nicolasmollet/restaurant.png'); 
+  
+ [amenity='cafe'] {
+ 	marker-file:url('img_m4all/nicolasmollet/restaurant.png'); 
+    [zoom>15] { marker-width:@iconsize_nm_15;}
+    [zoom>16] { marker-width:@iconsize_nm_16;}  
     }
-      [amenity='bar'] {
-    marker-width:32;
- 	 marker-file:url('img_m4all/nicolasmollet/bar.png'); 
+  
+ [amenity='bar'] {
+ 	marker-file:url('img_m4all/nicolasmollet/bar.png'); 
+    [zoom>15] { marker-width:@iconsize_nm_15;}
+    [zoom>16] { marker-width:@iconsize_nm_16;}  
     }
-      [amenity='pub'] {
-    marker-width:32;
- 	 marker-file:url('img_m4all/nicolasmollet/bar.png'); 
+  
+ [amenity='pub'] {
+ 	marker-file:url('img_m4all/nicolasmollet/bar.png'); 
+    [zoom>15] { marker-width:@iconsize_nm_15;}
+    [zoom>16] { marker-width:@iconsize_nm_16;}  
     }
-        [amenity='biergarten'] {
-    marker-width:32;
- 	 marker-file:url('img_m4all/nicolasmollet/bar.png'); 
+  
+ [amenity='biergarten'] {
+ 	marker-file:url('img_m4all/nicolasmollet/bar.png'); 
+    [zoom>15] { marker-width:@iconsize_nm_15;}
+    [zoom>16] { marker-width:@iconsize_nm_16;}  
     }
   
   
   //HOSPIALS
   
-      [amenity='hospital'] {
-    marker-width:32;
- 	 marker-file:url('img_m4all/nicolasmollet/hospital-building.png'); 
+ [amenity='hospital'],[amenity='hospital'] {
+ 	marker-file:url('img_m4all/nicolasmollet/hospital-building.png'); 
+    [zoom>15] { marker-width:@iconsize_nm_15;}
+    [zoom>16] { marker-width:@iconsize_nm_16;}  
     }
-        [amenity='clinic'] {
-    marker-width:32;
- 	 marker-file:url('img_m4all/nicolasmollet/hospital-building.png'); 
-    }
+  
 
   
   //ENTERTAIMENT
   
-            [amenity='cinema'] {
-    marker-width:15;
- 	 marker-file:url('img_m4all/thenounproject/pd/icon_79287.svg'); 
-    }
-              [amenity='theatre'] {
-    marker-width:32;
- 	 marker-file:url('img_m4all/nicolasmollet/theater.png'); 
-    }
-              [amenity='club'] {
-    marker-width:32;
- 	 marker-file:url('img_m4all/nicolasmollet/theater.png'); 
-    }
+ [amenity='cinema'] {
+ 	marker-file:url('img_m4all/thenounproject/pd/icon_79287.svg'); 
+    [zoom>15] { marker-width:15;}
+    [zoom>16] { marker-width:32;} 
+    }  
+  
+ [amenity='theatre'],[amenity='club'] {
+ 	marker-file:url('img_m4all/nicolasmollet/theater.png'); 
+    [zoom>15] { marker-width:@iconsize_nm_15;}
+    [zoom>16] { marker-width:@iconsize_nm_16;}  
+    }    
   
   /* НЕ НУЖНЫ (никто не знает что это такое, и как это обозначить на иконке)
               [amenity='nightclub'] {
@@ -218,41 +240,59 @@ line-color:  @road_fill;
  	 marker-file:url('img_m4all/nicolasmollet/test.png'); 
     }
   */  
+ 
   [amenity='arts_centre'] {
-    marker-width:32;
- 	 marker-file:url('img_m4all/nicolasmollet/theater.png'); 
-    }
-              [amenity='community_centre'] {
-    marker-width:32;
- 	 marker-file:url('img_m4all/nicolasmollet/museum_paintings.png'); 
-    }
-              [amenity='social_centre'] {
-    marker-width:32;
- 	 marker-file:url('img_m4all/nicolasmollet/museum_paintings.png'); 
-    }
+ 	marker-file:url('img_m4all/nicolasmollet/theater.png'); 
+    [zoom>15] { marker-width:@iconsize_nm_15;}
+    [zoom>16] { marker-width:@iconsize_nm_16;}  
+    } 
+  
+  [amenity='community_centre'] {
+ 	marker-file:url('img_m4all/nicolasmollet/museum_paintings.png'); 
+    [zoom>15] { marker-width:@iconsize_nm_15;}
+    [zoom>16] { marker-width:@iconsize_nm_16;}  
+    }   
+    
+  [amenity='social_centre'] {
+ 	marker-file:url('img_m4all/nicolasmollet/museum_paintings.png'); 
+    [zoom>15] { marker-width:@iconsize_nm_15;}
+    [zoom>16] { marker-width:@iconsize_nm_16;}  
+    }   
   
   
 // Shop-like  
-          [amenity='pharmacy'] {
-    marker-width:32;
- 	 marker-file:url('img_m4all/nicolasmollet/drugstore.png'); 
-    }
-          [amenity='toilets'] {
-    marker-width:15;
- 	 marker-file:url('img_m4all/aiga/Toilets_unisex.svg'); 
-    }
-            [amenity='embassy'] {
-    marker-width:32;
- 	 marker-file:url('img_m4all/nicolasmollet/embassy.png'); 
-    }
-              [amenity='bus_station'] {
-    marker-width:15;
- 	 marker-file:url('img_m4all/aiga/Aiga_bus_inv.svg'); 
-    }
-  }
-#amenity[zoom>16]  {
+  
+  [amenity='pharmacy'] {
+ 	marker-file:url('img_m4all/nicolasmollet/drugstore.png'); 
+    [zoom>15] { marker-width:@iconsize_nm_15;}
+    [zoom>16] { marker-width:@iconsize_nm_16;}  
+    }  
 
-	[amenity='bank']
+  [amenity='toilets'] {
+ 	marker-file:url('img_m4all/aiga/Toilets_unisex.svg'); 
+    [zoom>15] { marker-width:15;}
+    [zoom>16] { marker-width:15;} 
+    }
+
+  [amenity='embassy'] {
+ 	marker-file:url('img_m4all/nicolasmollet/embassy.png'); 
+    [zoom>15] { marker-width:@iconsize_nm_15;}
+    [zoom>16] { marker-width:@iconsize_nm_16;}  
+    }
+
+  [amenity='bus_station'] {
+ 	marker-file:url('img_m4all/aiga/Aiga_bus_inv.svg'); 
+    [zoom>15] { marker-width:@iconsize_aiga_15;}
+    [zoom>16] { marker-width:@iconsize_aiga_16;} 
+    }
+
+ 
+  }
+
+
+
+#amenity[zoom>16]  {
+	 [amenity='bank']
     ,[amenity='atm']
     ,[amenity='fast_food']
     ,[amenity='restaurant']
@@ -279,7 +319,7 @@ line-color:  @road_fill;
  text-size: 9;
  text-name: "[name]";
  text-halo-fill: #fff;
- text-allow-overlap:true;
+ text-allow-overlap:false;
  text-dx: 10;
  text-placement-type: simple;
   
