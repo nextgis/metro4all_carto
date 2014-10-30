@@ -831,14 +831,14 @@
     },
     {
       "extent": [
-        26.4400000307749,
+        37.08202167099231,
         55.405819814365984,
         38.04605608433051,
-        61.64181858137384
+        56.10878709109789
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "( SELECT way, \"railway\" AS type\n  FROM planet_osm_polygon\n  WHERE railway = 'platform'\n  ORDER BY ST_YMin(ST_Envelope(way)) DESC\n) AS data",
+        "table": "( SELECT way, \"railway\" AS type,\nST_intersects(ST_PointOnSurface(way), (select ST_Collect(ST_Buffer(way,40))  from planet_osm_line where railway='subway')) AS near_metro\nFROM planet_osm_polygon  WHERE railway = 'platform'\n) AS data",
         "key_field": "",
         "geometry_field": "way",
         "extent_cache": "dynamic",
@@ -847,7 +847,10 @@
         "user": "trolleway",
         "password": "16208",
         "dbname": "gis",
-        "port": "5432"
+        "port": "5432",
+        "id": "platforms",
+        "project": "metro4all_cartostyle",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "platforms",
       "class": "",

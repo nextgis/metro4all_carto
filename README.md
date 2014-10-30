@@ -15,6 +15,9 @@ Tilemill Map style cloned from osm-bright for site metro4all.ru with metro / sub
  * More attention for pedestrians: Highways for cars marked by only one color, footways are more remarkable.
  * addr:highway rendering
   
+## Features
+Платформы метро рисуются:
+
 ## Installation
 
 This folder is a tilemill project. Just put it to ~/Documents/tilemill/projects/

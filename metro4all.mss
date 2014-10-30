@@ -67,8 +67,15 @@ line-color:  @road_fill;
 }
 
 
-#platforms, #platforms_line2buffers[zoom>=14]{
+#platforms
+{
+  ['near_metro'=true][zoom>=14]{
     polygon-fill: #cf6767; 
+  }
+    ['near_metro'=false][zoom>=14]{
+    polygon-fill: #a4a4a4; 
+  }
+  
   }
 
 #tunnel_footways[zoom>15] {
@@ -323,6 +330,10 @@ line-color:  @road_fill;
  text-dx: 10;
  text-placement-type: simple;
   
+    [zoom>18]
+      {
+       text-allow-overlap:true;
+      }
 }  
 }
 
