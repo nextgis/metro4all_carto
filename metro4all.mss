@@ -69,14 +69,31 @@ line-color:  @road_fill;
 
 #platforms
 {
-  ['near_metro'=true][zoom>=14]{
+  // Metro platforms
+  ['near_metro_line'=true]['near_metro_station_point'=true][zoom>=14]{
     polygon-fill: #cf6767; 
   }
-    ['near_metro'=false][zoom>=14]{
+  // Not metro platforms
+    ['near_metro_line'=false][zoom>=14]{
     polygon-fill: #a4a4a4; 
   }
+      ['near_metro_station_point'=false][zoom>=14]{
+    polygon-fill: #a4a4a4; 
+  }
+
+  }
+
+/*
+#platforms
+{
+      ['near_metro_station_point'=true][zoom>=14]{
+    polygon-fill: #00ff00;
+    polygon-opacity : 0.5;
+  }  
   
   }
+
+*/
 
 #tunnel_footways[zoom>15] {
   line-width:4;
