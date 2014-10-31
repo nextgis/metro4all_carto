@@ -113,6 +113,19 @@ line-color:  @road_fill;
   marker-allow-overlap:true;
 }
 
+#subway_entrances[zoom>7] {
+ text-face-name:@sans;
+ text-fill: #00aa00 * 0.6;
+ text-halo-radius: 1.5;
+ text-size: 9;
+ text-name: "[network]";
+ text-halo-fill: #fff;
+ text-allow-overlap:false;
+ text-dx: 10;
+ text-placement-type: simple;
+}
+  
+  
 #bus_stops[zoom>15] { //bus stops icons
   marker-width:15;
   marker-file:url('img_m4all/wikimedia/5.16_Russian_road_sign.svg');
