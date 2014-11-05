@@ -105,13 +105,31 @@ line-color:  @road_fill;
   polygon-fill: #740000;
 }
 
-#subway_entrances[zoom>15] {
+#subway_entrances[zoom>7] {
+  /*
+  в осме у точек станций должен быть тег network, если его нет, то operator. 
+  
+  */
+    marker-allow-overlap:true;
+  [network='НИЖЕГОРОДСКИЙ МЕТРОПОЛИТЕН']
+    {
   marker-width:13;
-  marker-fill:#f45;
+  marker-file:url('img_m4all/wikimedia-subway/NNMetro.svg');
+    }
+  
+  [network='МОСКОВСКИЙ МЕТРОПОЛИТЕН']
+    {
+  marker-width:13;
+  marker-file:url('img_m4all/wikimedia-subway/Mosmetro.svg');
+    }
+  // Маркер метро по умолчанию
+  marker-width:13;
   marker-file:url('img/walking.n.12.png');
-  marker-line-color:#813;
-  marker-allow-overlap:true;
+  marker-allow-overlap:true; 
+  
 }
+
+
 
 #subway_entrances[zoom>7] {
  text-face-name:@sans;
@@ -124,7 +142,8 @@ line-color:  @road_fill;
  text-dx: 10;
  text-placement-type: simple;
 }
-  
+
+
   
 #bus_stops[zoom>15] { //bus stops icons
   marker-width:15;

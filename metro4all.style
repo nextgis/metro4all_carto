@@ -150,6 +150,7 @@ node,way   subway       text         linear
 node	   station      text         linear
 way        area:highway text         polygon
 node,way   operator     text         polygon
+node,way   network      text         polygon
 
 
 # Area tags
