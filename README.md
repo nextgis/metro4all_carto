@@ -16,7 +16,8 @@ Tilemill Map style cloned from osm-bright for site metro4all.ru with metro / sub
  * addr:highway rendering
   
 ## Features
-Платформы метро рисуются:
+ * Платформы метро рисуются красным, если рядом есть точка станции метро. 
+ * Иконка системы метро рисуется, если рядом есть точка станции метро с тегами railway=station, station=subway, network=*
 
 ## Installation
 
@@ -49,3 +50,26 @@ Clone this map style
 * [licensename] from nicolasmollet
 * public domain from thenounproject
 * public domain aisa from wikimedia
+
+### Test overpass query for debug metro station draw
+
+```
+<union>
+<query type="node">
+  <has-kv k="railway" v="station"/>
+  <has-kv k="station" v="subway"/>
+  <bbox-query {{bbox}}/>
+</query>
+<query type="node">
+  <has-kv k="railway" v="subway_entrance"/>
+  <bbox-query {{bbox}}/>
+</query>
+</union>
+
+<union>
+  <item/>
+  <recurse type="down"/>
+</union>
+
+<print mode="meta"/>
+```
