@@ -105,7 +105,7 @@ line-color:  @road_fill;
   polygon-fill: #740000;
 }
 
-#subway_entrances/*[zoom>7]*/ {
+#subway_entrances[zoom>7] {
   /*
   в осме у точек станций должен быть тег network, если его нет, то operator. 
   
