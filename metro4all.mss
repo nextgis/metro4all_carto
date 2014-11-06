@@ -105,51 +105,123 @@ line-color:  @road_fill;
   polygon-fill: #740000;
 }
 
-#subway_entrances[zoom>7] {
+#subway_entrances/*[zoom>7]*/ {
   /*
   в осме у точек станций должен быть тег network, если его нет, то operator. 
   
   */
-    marker-allow-overlap:true;
+    marker-allow-overlap:false;
+  
+  // METRO LOGOS RU
   
     [network='МОСКОВСКИЙ МЕТРОПОЛИТЕН']
     {
-  marker-width:13;
+  marker-width:15;
   marker-file:url('img_m4all/wikimedia-subway/Mosmetro.svg');
     }
       [network='ПЕТЕРБУРГСКИЙ МЕТРОПОЛИТЕН']
     {
-  marker-width:13;
+  marker-width:15;
   marker-file:url('img_m4all/wikimedia-subway/Spb_metro_logo.svg');
     }
   
   [network='НИЖЕГОРОДСКИЙ МЕТРОПОЛИТЕН']
     {
-  marker-width:13;
+  marker-width:15;
   marker-file:url('img_m4all/wikimedia-subway/NNMetro.svg');
     }
+   [network='КАЗАНСКИЙ МЕТРОПОЛИТЕН']
+    {
+  marker-width:15;
+  marker-file:url('img_m4all/wikimedia-subway/Kazan-metro-Logo.svg');
+    } 
+   [network='САМАРСКИЙ МЕТРОПОЛИТЕН']
+    {
+  marker-width:130;
+  marker-file:url('img_m4all/wikimedia-subway/Metro-logo.svg');
+    } 
+     [network='ЕМУП «ЕКАТЕРИНБУРГСКИЙ МЕТРОПОЛИТЕН»']
+    {
+  marker-width:15;
+  marker-file:url('img_m4all/wikimedia-subway/Ekb_metro_logo.svg');
+    } 
+      [network="НОВОСИБИРСКИЙ МЕТРОПОЛИТЕН"]
+    {
+  marker-width:15;
+  marker-file:url('img_m4all/wikimedia-subway/Nsk_logoklkljjkl.png');
+    }
   
-
+  
+  //METRO LOGOS UA
+      [network='КП "КИЇВСЬКИЙ МЕТРОПОЛІТЕН"']
+    {
+  marker-width:15;
+  marker-file:url('img_m4all/wikimedia-subway/Kyiv_Metro_logo.svg');
+    }  
+  
+    [network='КП «ХАРКІВСЬКИЙ МЕТРОПОЛІТЕН»']
+    {
+  marker-width:15;
+  marker-file:url('img_m4all/wikimedia-subway/Kharkov_metro_logo.png');
+    }  
+  /*
+     [network='"КП "ДНЕПРОПЕТРОВСКИЙ МЕТРОПОЛИТЕН""']
+    {
+  marker-width:15;
+  marker-file:url('img_m4all/wikimedia-subway/Kharkov_metro_logo.png');
+    }
+  */
+  
+        [network="МИНСКИЙ МЕТРОПОЛИТЕН"]
+    {
+  marker-width:15;
+  marker-file:url('img_m4all/wikimedia-subway/Minsk_metro_logo.svg');
+    }
+  
+  // METRO LOGOS EUROPE
+  
+        [network="ATAC"]
+    {
+  marker-width:15;
+  marker-file:url('img_m4all/wikimedia-subway/Logo_Metropolitane_Italia.svg');
+    }  
+ 
+  
+    //METRO LOGOS ASIA
+  /*
+  	 [network="BAKI METROPOLITENI"]
+    {
+  marker-width:15;
+  marker-file:url('img_m4all/wikimedia-subway/Kharkov_metro_logo.png');
+    }
+  */
+      [network="TBILISI METRO"]
+    {
+  marker-width:15;
+  marker-file:url('img_m4all/wikimedia-subway/Metro_Tbilisi_logo.svg');
+    }
+  /*
+        [network="АЛМАТИНСКИЙ МЕТРОПОЛИТЕН"]
+    {
+  marker-width:15;
+  marker-file:url('img_m4all/wikimedia-subway/Metro_Tbilisi_logo.svg');
+    }
+   */
+        [network="ТАШКЕНТСКИЙ МЕТРОПОЛИТЕН"]
+    {
+  marker-width:15;
+  marker-file:url('img_m4all/wikimedia-subway/Uzbmetrologo.gif');
+    }
+ 
+  
   // Маркер метро по умолчанию
   marker-width:13;
   marker-file:url('img/walking.n.12.png');
-  marker-allow-overlap:true; 
+  //marker-allow-overlap:true; 
   
 }
 
 
-
-#subway_entrances[zoom>7] {
- text-face-name:@sans;
- text-fill: #00aa00 * 0.6;
- text-halo-radius: 1.5;
- text-size: 9;
- text-name: "[network]";
- text-halo-fill: #fff;
- text-allow-overlap:false;
- text-dx: 10;
- text-placement-type: simple;
-}
 
 
   
