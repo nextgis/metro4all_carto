@@ -111,17 +111,25 @@ line-color:  @road_fill;
   
   */
     marker-allow-overlap:true;
+  
+    [network='МОСКОВСКИЙ МЕТРОПОЛИТЕН']
+    {
+  marker-width:13;
+  marker-file:url('img_m4all/wikimedia-subway/Mosmetro.svg');
+    }
+      [network='ПЕТЕРБУРГСКИЙ МЕТРОПОЛИТЕН']
+    {
+  marker-width:13;
+  marker-file:url('img_m4all/wikimedia-subway/Spb_metro_logo.svg');
+    }
+  
   [network='НИЖЕГОРОДСКИЙ МЕТРОПОЛИТЕН']
     {
   marker-width:13;
   marker-file:url('img_m4all/wikimedia-subway/NNMetro.svg');
     }
   
-  [network='МОСКОВСКИЙ МЕТРОПОЛИТЕН']
-    {
-  marker-width:13;
-  marker-file:url('img_m4all/wikimedia-subway/Mosmetro.svg');
-    }
+
   // Маркер метро по умолчанию
   marker-width:13;
   marker-file:url('img/walking.n.12.png');
