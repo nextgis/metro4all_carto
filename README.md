@@ -29,16 +29,14 @@ Install a TileMill 0.10.2-dev, or build it from source. See the https://www.mapb
 
 Clone this map style
 
-   cd ~/Documents/MapBox/project
-   git clone https://github.com/nextgis/metro4all_cartostyle.git
-
+        cd ~/Documents/MapBox/project
+        git clone https://github.com/nextgis/metro4all_cartostyle.git
 
 * get OSM extract in osm or pbf formats (for subway: https://mapzen.com/metro-extracts/)
 * Import OSM into PostGIS 
 
-
-	osm2pgsql --create --multi-geometry --database gis --username trolleway  --style metro4all.style RU-MOW.osm.pbf 		#create
-	osm2pgsql --append --multi-geometry --database gis --username trolleway  --style metro4all.style london_england.osm.pbf		#append
+        osm2pgsql --create --multi-geometry --database gis --username trolleway  --style metro4all.style RU-MOW.osm.pbf 		#create
+        osm2pgsql --append --multi-geometry --database gis --username trolleway  --style metro4all.style london_england.osm.pbf		#append
 
 
 * change database credentials in ~/Documents/tilemill/projects/metro4all_cartostyle/project.mml An this tool is recommended: http://stevage.github.io/tilemill-portability/

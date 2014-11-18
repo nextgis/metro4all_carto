@@ -486,7 +486,7 @@ line-color:  @road_fill;
   text-vertical-alignment : top;
   text-dx: 3;
   text-dy: 3;
-  text-allow-overlap:true;
+  text-allow-overlap:false;
   text-size: 10;
   text-halo-radius:1;
 }
