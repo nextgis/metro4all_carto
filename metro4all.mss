@@ -105,12 +105,12 @@ line-color:  @road_fill;
   polygon-fill: #740000;
 }
 
-#subway_entrances/*[zoom>7]*/ {
+#subway_entrances[zoom>7] {
   /*
   в осме у точек станций должен быть тег network, если его нет, то operator. 
   
   */
-    marker-allow-overlap:false;
+    marker-allow-overlap:true;
   
   // METRO LOGOS RU
   
@@ -467,4 +467,26 @@ line-color:  @road_fill;
 }
 
 
-
+/* City label for low zooms - empty map with city names*/
+#place::city[type='city'][zoom<8] {
+  text-name:'[name]';
+  text-face-name:@sans;
+  text-placement:point;
+  text-fill:@city_text;
+  text-halo-fill:@city_halo;
+  text-halo-radius:2;
+  
+  marker-width:5;
+  marker-fill:#fff;
+  marker-line-color:#333;
+  marker-allow-overlap: true;
+  marker-placement: point;
+  marker-opacity: 1;
+  text-horizontal-alignment : right;
+  text-vertical-alignment : top;
+  text-dx: 3;
+  text-dy: 3;
+  text-allow-overlap:true;
+  text-size: 10;
+  text-halo-radius:1;
+}

@@ -701,7 +701,10 @@
         "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-populated-places-simple.zip",
         "host": "gis-lab.info",
         "password": "m4all",
-        "user": "metro4all"
+        "user": "metro4all",
+        "id": "ne_places",
+        "project": "metro4all_cartostyle",
+        "srs": ""
       },
       "class": "",
       "geometry": "point",
@@ -709,37 +712,6 @@
       "name": "ne_places",
       "srs": "",
       "srs-name": "autodetect"
-    },
-    {
-      "Datasource": {
-        "dbname": "gis",
-        "extent": "497042.48,6829651.85,4283788.09,7591492.55",
-        "geometry_field": "way",
-        "host": "localhost",
-        "id": "place",
-        "key_field": "",
-        "password": "16208",
-        "project": "foss4g-2011",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, place AS type, name, z_order, population\n  FROM planet_osm_point\n  WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality')\n  ORDER BY population DESC NULLS LAST\n) AS data",
-        "type": "postgis",
-        "user": "trolleway",
-        "extent_cache": "auto",
-        "port": "5432"
-      },
-      "class": "",
-      "geometry": "point",
-      "id": "place",
-      "name": "place",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
-      "extent": [
-        4.465008566406715,
-        52.163000416572096,
-        38.48192315176172,
-        56.165798765072246
-      ],
-      "advanced": {}
     },
     {
       "Datasource": {
@@ -776,18 +748,18 @@
     {
       "geometry": "linestring",
       "extent": [
-        4.465000122243045,
-        52.162999975738465,
-        44.134999315832935,
-        56.399999398513245
+        27.91857919806252,
+        42.415016999366586,
+        45.983376617361465,
+        59.6796040117228
       ],
       "Datasource": {
         "type": "postgis",
         "table": "(select way, railway from planet_osm_line where railway in ('rail', 'narrow_gauge','tram','monorail') and service is null and tunnel is null) as railway",
         "key_field": "",
         "geometry_field": "way",
-        "extent_cache": "auto",
-        "extent": "497041.54,6829651.77,4913085.65,7638459.83",
+        "extent_cache": "dynamic",
+        "extent": "",
         "user": "trolleway",
         "password": "16208",
         "dbname": "gis",
@@ -1248,6 +1220,37 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "subway_stations"
+    },
+    {
+      "Datasource": {
+        "dbname": "gis",
+        "extent": "",
+        "geometry_field": "way",
+        "host": "localhost",
+        "id": "place",
+        "key_field": "",
+        "password": "16208",
+        "project": "metro4all_cartostyle",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table": "( SELECT way, place AS type, name, z_order, population\n  FROM planet_osm_point\n  WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality')\n  ORDER BY population DESC NULLS LAST\n) AS data",
+        "type": "postgis",
+        "user": "trolleway",
+        "extent_cache": "dynamic",
+        "port": "5432"
+      },
+      "class": "",
+      "geometry": "point",
+      "id": "place",
+      "name": "place",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "extent": [
+        43.71804906148624,
+        56.19312456736709,
+        44.13496769513493,
+        56.39996728454158
+      ],
+      "advanced": {}
     },
     {
       "geometry": "point",
