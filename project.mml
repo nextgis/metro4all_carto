@@ -712,33 +712,6 @@
     },
     {
       "Datasource": {
-        "dbname": "metro4all_osm",
-        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-populated-places-simple.zip",
-        "host": "gis-lab.info",
-        "password": "m4all",
-        "user": "metro4all",
-        "id": "ne_places",
-        "project": "metro4all_cartostyle",
-        "srs": ""
-      },
-      "class": "",
-      "geometry": "point",
-      "id": "ne_places",
-      "name": "ne_places",
-      "srs": "",
-      "srs-name": "autodetect",
-      "extent": [
-        -179.589978883969,
-        -81.17908472282717,
-        179.38330358817024,
-        82.48332318035945
-      ],
-      "layer": null,
-      "advanced": {}
-    },
-    {
-      "Datasource": {
         "dbname": "gis",
         "extent": "",
         "geometry_field": "way",
