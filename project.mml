@@ -1,9 +1,9 @@
 {
   "bounds": [
-    37.3391,
-    55.5609,
-    37.8555,
-    55.9373
+    -179,
+    -85,
+    179,
+    85
   ],
   "center": [
     37.574,
@@ -745,10 +745,10 @@
     {
       "geometry": "linestring",
       "extent": [
-        -9.500656555858999,
-        38.6893216110262,
-        87.11787343700276,
-        61.78859298973552
+        29.168035685950123,
+        55.285002687796606,
+        38.4299982825514,
+        60.34499730199639
       ],
       "Datasource": {
         "type": "postgis",
@@ -1229,7 +1229,7 @@
         "password": "16208",
         "project": "metro4all_cartostyle",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, place AS type, name, z_order, population\n  FROM planet_osm_point\n  WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality')\n  ORDER BY population::integer DESC NULLS LAST\n) AS data",
+        "table": "( SELECT way, place AS type, name, z_order, population::integer AS population\n  FROM planet_osm_point\n  WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality')\n  ORDER BY population::integer DESC NULLS LAST\n) AS data",
         "type": "postgis",
         "user": "trolleway",
         "extent_cache": "dynamic",

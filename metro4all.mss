@@ -111,7 +111,7 @@ line-color:  @road_fill;
   в осме у точек станций должен быть тег network, если его нет, то operator. 
   
   */
-    marker-allow-overlap:true;
+    marker-allow-overlap:false;
   
   // METRO LOGOS RU
   
@@ -288,7 +288,7 @@ line-color:  @road_fill;
 @iconsize_aiga_16:32;
 
 
-//AMENITIS
+	//AMENITIES
 
 
 
@@ -371,7 +371,7 @@ line-color:  @road_fill;
     [zoom>16] { marker-width:@iconsize_nm_16;}  
     }    
   
-  /* НЕ НУЖНЫ (никто не знает что это такое, и как это обозначить на иконке)
+  /* КЛУБАСИКИ НЕ НУЖНЫ (никто не знает что это такое, и как это обозначить на иконке)
               [amenity='nightclub'] {
     marker-width:32;
  	 marker-file:url('img_m4all/nicolasmollet/test.png'); 
@@ -469,7 +469,7 @@ line-color:  @road_fill;
 
 
 /* City label for low zooms - empty map with city names*/
-#place::city[type='city'][zoom<8] {
+#place::city[type='city'][zoom<8][population>700000] {
   
 
   
@@ -493,6 +493,10 @@ line-color:  @road_fill;
   text-allow-overlap:false;
   text-size: 10;
   text-halo-radius:1;
+  
+  [zoom>5] {
+    text-size: 14;
+    }
 
 
 }
