@@ -1229,7 +1229,7 @@
         "password": "16208",
         "project": "metro4all_cartostyle",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, place AS type, name, z_order, population\n  FROM planet_osm_point\n  WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality')\n  ORDER BY population DESC NULLS LAST\n) AS data",
+        "table": "( SELECT way, place AS type, name, z_order, population\n  FROM planet_osm_point\n  WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality')\n  ORDER BY population::integer DESC NULLS LAST\n) AS data",
         "type": "postgis",
         "user": "trolleway",
         "extent_cache": "dynamic",
@@ -1242,10 +1242,10 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "extent": [
-        -9.500799926978342,
-        38.69999182111164,
-        87.11787343700276,
-        61.78824498120364
+        29.16800352626295,
+        55.28507558870547,
+        38.42998965872467,
+        60.34499476854497
       ],
       "advanced": {}
     },

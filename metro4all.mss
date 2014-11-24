@@ -67,6 +67,7 @@ line-color:  @road_fill;
 }
 
 
+
 #platforms
 {
   // Metro platforms
@@ -266,7 +267,7 @@ line-color:  @road_fill;
   marker-ignore-placement:true;
 }
 
-#shops[zoom>16] { //Подписи магазинов
+#shops[zoom>17] { //Подписи магазинов
  text-face-name:@sans;
  text-fill: #555555 * 0.6;
  text-halo-radius: 1.5;
@@ -469,6 +470,9 @@ line-color:  @road_fill;
 
 /* City label for low zooms - empty map with city names*/
 #place::city[type='city'][zoom<8] {
+  
+
+  
   text-name:'[name]';
   text-face-name:@sans;
   text-placement:point;
@@ -479,7 +483,7 @@ line-color:  @road_fill;
   marker-width:5;
   marker-fill:#fff;
   marker-line-color:#333;
-  marker-allow-overlap: true;
+  marker-allow-overlap: false;
   marker-placement: point;
   marker-opacity: 1;
   text-horizontal-alignment : right;
@@ -489,4 +493,6 @@ line-color:  @road_fill;
   text-allow-overlap:false;
   text-size: 10;
   text-halo-radius:1;
+
+
 }

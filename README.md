@@ -25,7 +25,7 @@ This folder is a tilemill project. Just put it to ~/Documents/tilemill/projects/
 
 ### More detailed installation
 
-Install a TileMill 0.10.2-dev, or build it from source. See the https://www.mapbox.com/tilemill/ for info.
+This style required TileMill 0.10.2-dev, or build from source. See https://www.mapbox.com/tilemill/docs/source/ for manual building instructions.
 
 Clone this map style
 
@@ -39,7 +39,7 @@ Clone this map style
         osm2pgsql --append --multi-geometry --database gis --username trolleway  --style metro4all.style london_england.osm.pbf		#append
 
 
-* change database credentials in ~/Documents/tilemill/projects/metro4all_cartostyle/project.mml An this tool is recommended: http://stevage.github.io/tilemill-portability/
+* change database credentials in ~/Documents/tilemill/projects/metro4all_cartostyle/project.mml This tool is recommended: http://stevage.github.io/tilemill-portability/
 * Run tilemill
 * Recalculate layer extents
  
