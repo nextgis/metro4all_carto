@@ -226,7 +226,14 @@ line-color:  @road_fill;
 
 	// BUS STOPS
 
-#bus_stops[zoom>15] { //bus stops icons
+#bus_stops[zoom>15][zoom <= 16], #tram_stops[zoom>15][zoom <= 16] { //bus stops icons
+  marker-width:6;
+  marker-fill:#0000ff;
+  marker-allow-overlap:true;
+  marker-line-color:white;
+}
+
+#bus_stops[zoom>16] { //bus stops icons
   marker-width:15;
   marker-file:url('img_m4all/wikimedia/5.16_Russian_road_sign.svg');
   marker-allow-overlap:true;
@@ -244,16 +251,16 @@ line-color:  @road_fill;
  text-placement-type: simple;
 }
 
-#tram_stops[zoom>15] {
+#tram_stops[zoom>16] {
   marker-width:15;
   marker-file:url('img_m4all/wikimedia/5.17_Russian_road_sign.svg');
   marker-allow-overlap:true;
 }
 
 
-#highway_area[zoom>=17] {
-  line-color:@primary_case;
-  line-width:0.5;
+#highway_area[zoom>=15] {
+  //line-color:@primary_case;
+  //line-width:0.5;
   polygon-opacity:1;
   polygon-fill:@primary_fill;
 }

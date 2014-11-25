@@ -624,16 +624,16 @@
       "advanced": {}
     },
     {
-      "geometry": "unknown",
+      "geometry": "polygon",
       "extent": [
-        -9.498222121439033,
-        38.77997938066311,
-        34.353645823818994,
-        61.78859298973552
+        29.168016911160684,
+        55.28502176994219,
+        38.429995407942485,
+        60.344993790721574
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(select * from planet_osm_polygon where \"area:highway\" is not null AND \"area:highway\" NOT IN ('footway' ) ) as highway_area",
+        "table": "(select * from planet_osm_polygon where (\"area:highway\" is not null AND \"area:highway\" NOT IN ('footway' ) ) OR\n (highway IS NOT null AND area='yes' AND highway NOT IN('footway') ) \n   )  as highway_area",
         "key_field": "",
         "geometry_field": "way",
         "extent_cache": "dynamic",
