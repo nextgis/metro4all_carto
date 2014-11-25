@@ -3,3 +3,4 @@
 *.osm
 *.pbf
 *~
+.thumb
