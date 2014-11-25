@@ -17,11 +17,11 @@
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
     "palette.mss",
-    "metro4all.mss",
     "base.mss",
     "roads.mss",
     "labels.mss",
-    "rails.mss"
+    "rails.mss",
+    "metro4all.mss"
   ],
   "Layer": [
     {
@@ -1188,37 +1188,6 @@
       "name": "footway_area"
     },
     {
-      "geometry": "point",
-      "extent": [
-        -9.500799926978342,
-        38.69999182111164,
-        87.11787343700276,
-        61.78824498120364
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "( SELECT way,  name, station\n  FROM planet_osm_point\n  WHERE (railway='station' OR aerialway='station')\n  AND disused IS NULL \n AND (station IN ('subway','monorail') OR aerialway='station')\n) AS data",
-        "key_field": "",
-        "geometry_field": "way",
-        "extent_cache": "dynamic",
-        "extent": "",
-        "host": "localhost",
-        "user": "trolleway",
-        "password": "16208",
-        "dbname": "gis",
-        "id": "subway_stations",
-        "project": "project29variant3",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "port": "5432"
-      },
-      "id": "subway_stations",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "subway_stations"
-    },
-    {
       "Datasource": {
         "dbname": "gis",
         "extent": "",
@@ -1307,6 +1276,37 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "amenity"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -9.500799926978342,
+        38.69999182111164,
+        87.11787343700276,
+        61.78824498120364
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "( SELECT way,  name, station\n  FROM planet_osm_point\n  WHERE (railway='station' OR aerialway='station')\n  AND disused IS NULL \n AND (station IN ('subway','monorail') OR aerialway='station')\n) AS data",
+        "key_field": "",
+        "geometry_field": "way",
+        "extent_cache": "dynamic",
+        "extent": "",
+        "host": "localhost",
+        "user": "trolleway",
+        "password": "16208",
+        "dbname": "gis",
+        "id": "subway_stations",
+        "project": "project29variant3",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "port": "5432"
+      },
+      "id": "subway_stations",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "subway_stations"
     }
   ],
   "scale": 1,

@@ -28,17 +28,7 @@ Map { background-color: @land; } //TODO change base.mss map background to water,
 // residential street
 
 
-#subway_stations::subway[zoom>=10] {
- text-face-name:@sans;
- text-fill: #ff5555 * 0.6;
- text-halo-radius: 1.5;
- text-name: "[name]";
- text-halo-fill: #fff;
- text-allow-overlap:false;
 
-    [zoom>=10]{ text-size: 7; }
-    [zoom>=15]{ text-size: 15; }
-}
 
 
 
@@ -507,5 +497,19 @@ line-color:  @road_fill;
     text-size: 14;
     }
 
+}
 
+
+#subway_stations::subway[zoom>=10] {
+ text-face-name:@sans;
+ text-fill: #ff5555 * 0.6;
+ text-halo-radius: 1.5;
+ text-name: "[name]";
+ text-halo-fill: #fff;
+  
+ [zoom<14] { text-allow-overlap:false;}
+ [zoom>=14] { text-allow-overlap:true;}
+  
+ [zoom>=10]{ text-size: 7; }
+ [zoom>=15]{ text-size: 15; }
 }
