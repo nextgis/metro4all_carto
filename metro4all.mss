@@ -282,10 +282,10 @@ line-color:  @road_fill;
 
 // Size variables. nicolasmollet icons
 @iconsize_nm_15:20;
-@iconsize_nm_16:32;
+@iconsize_nm_16:25;
 // Size variables. aiga icons
 @iconsize_aiga_15:20;
-@iconsize_aiga_16:32;
+@iconsize_aiga_16:28;
 
 
 
@@ -361,7 +361,7 @@ line-color:  @road_fill;
  [amenity='cinema'] {
  	marker-file:url('img_m4all/thenounproject/pd/icon_79287.svg'); 
     [zoom>15] { marker-width:15;}
-    [zoom>16] { marker-width:32;} 
+    [zoom>16] { marker-width:20;} 
     }  
   
  [amenity='theatre'],[amenity='club'] {
