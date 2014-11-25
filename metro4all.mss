@@ -219,20 +219,20 @@ line-color:  @road_fill;
   marker-width:13;
   marker-file:url('img/walking.n.12.png');
   //marker-allow-overlap:true; 
-  
 }
 
 
 
 
-  
+	// BUS STOPS
+
 #bus_stops[zoom>15] { //bus stops icons
   marker-width:15;
   marker-file:url('img_m4all/wikimedia/5.16_Russian_road_sign.svg');
   marker-allow-overlap:true;
 }
 
-#bus_stops[zoom>16] { //bus stops captions
+#bus_stops[zoom>16],#tram_stops[zoom>16]  { //bus stops captions
  text-face-name:@sans;
  text-fill: #5555ff * 0.6;
  text-halo-radius: 1.5;
@@ -258,6 +258,8 @@ line-color:  @road_fill;
   polygon-fill:@primary_fill;
 }
 
+
+
 //SHOPS
 
 #shops[zoom>15] {
@@ -280,6 +282,7 @@ line-color:  @road_fill;
 }
 
 
+
 // Size variables. nicolasmollet icons
 @iconsize_nm_15:20;
 @iconsize_nm_16:32;
@@ -288,9 +291,8 @@ line-color:  @road_fill;
 @iconsize_aiga_16:32;
 
 
+
 	//AMENITIES
-
-
 
 #amenity[zoom>15] {
   
