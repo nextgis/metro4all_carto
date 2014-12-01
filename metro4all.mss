@@ -173,7 +173,18 @@ line-color:  @road_fill;
   marker-width:15;
   marker-file:url('img_m4all/wikimedia-subway/Logo_Metropolitane_Italia.svg');
     }  
- 
+  
+        [network="WARSAW METRO"]
+    {
+  marker-width:15;
+  marker-file:url('img_m4all/wikimedia-subway/Warsaw_Metro_logo.svg');
+    }
+  
+        [network="AMSTERDAM METRO"]
+    {
+  marker-width:15;
+  marker-file:url('img_m4all/amsterdam_metro_logo.jpg');
+    } 
   
     //METRO LOGOS ASIA
   /*
