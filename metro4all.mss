@@ -1,6 +1,3 @@
-Map { background-color: @land; } //TODO change base.mss map background to water,
-// and turn on land shapes
-
 //@standard_line:     #333; //footway
 //@standard_fill:     #fff;
 //@standard_case:     #333 * 0.9;
