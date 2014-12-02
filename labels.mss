@@ -50,6 +50,7 @@
   }
 }
 
+/*
 #place::state[type='state'][zoom>=5][zoom<=10] {
   text-name:'[name]';
   text-face-name:@sans_bold_italic;
@@ -84,7 +85,7 @@
     text-character-spacing: 2;
   }
 }
-
+*/
 /* ---- Cities ------------------------------------------------------ */
 
 

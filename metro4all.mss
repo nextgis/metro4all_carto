@@ -185,7 +185,11 @@ line-color:  @road_fill;
   marker-width:15;
   marker-file:url('img_m4all/amsterdam_metro_logo.jpg');
     } 
-  
+        [network="GLASGOW SUBWAY"]
+    {
+  marker-width:15;
+  marker-file:url('img_m4all/wikimedia-subway/Glasgow_Subway.svg');
+    }   
     //METRO LOGOS ASIA
   /*
   	 [network="BAKI METROPOLITENI"]
