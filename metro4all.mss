@@ -480,7 +480,7 @@ line-color:  @road_fill;
 
 
 /* City label for low zooms - empty map with city names*/
-#place::city[type='city'][zoom<8][population>700000] {
+#place::city[type='city'][zoom<8][population>200000] {
   
 
   
