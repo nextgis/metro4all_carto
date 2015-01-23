@@ -190,6 +190,11 @@ line-color:  @road_fill;
   marker-width:15;
   marker-file:url('img_m4all/wikimedia-subway/gla_logo.svg');
     }   
+          [network="TL"] //LAUZANNE
+    {
+  marker-width:18;
+  marker-file:url('img_m4all/wikimedia-subway/lau_logo.svg');
+    }   
     //METRO LOGOS ASIA
   /*
   	 [network="BAKI METROPOLITENI"]
