@@ -744,14 +744,14 @@
     {
       "geometry": "linestring",
       "extent": [
-        29.168035685950123,
-        55.285002687796606,
-        38.4299982825514,
-        60.34499730199639
+        -4.6129971161440935,
+        46.47891839143667,
+        83.13059890999044,
+        61.11820999843508
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(select way, railway from planet_osm_line where railway in ('rail', 'narrow_gauge','tram','monorail') and service is null and tunnel is null) as railway",
+        "table": "(select way, railway from planet_osm_line where railway in ('rail', 'narrow_gauge','tram','monorail','light_rail') and service is null and tunnel is null) as railway",
         "key_field": "",
         "geometry_field": "way",
         "extent_cache": "dynamic",
@@ -799,14 +799,14 @@
     },
     {
       "extent": [
-        -9.498222121439033,
-        38.77997938066311,
-        34.353645823818994,
-        61.78859298973552
+        6.148017522564469,
+        46.20429626674347,
+        6.93087566698266,
+        46.552956769065034
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "( SELECT way, \"railway\" AS type,\nST_intersects(ST_PointOnSurface(way), (select ST_Collect(ST_Buffer(way,30))  from planet_osm_line where railway='subway')) AS near_metro_line,\nST_intersects(ST_Centroid(way), (select ST_Collect(ST_Buffer(way,250))  from planet_osm_point where railway='station' AND station='subway')) AS near_metro_station_point\nFROM planet_osm_polygon  WHERE railway = 'platform'\n) AS data",
+        "table": "( SELECT way, \"railway\" AS type,\nST_intersects(ST_PointOnSurface(way), (select ST_Collect(ST_Buffer(way,30))  from planet_osm_line where railway='subway')) AS near_metro_line,\nST_intersects(ST_Centroid(way), (select ST_Collect(ST_Buffer(way,250))  from planet_osm_point where railway IN ('station','halt') AND station='subway')) AS near_metro_station_point\nFROM planet_osm_polygon  WHERE railway = 'platform'\n) AS data",
         "key_field": "",
         "geometry_field": "way",
         "extent_cache": "dynamic",
@@ -1130,14 +1130,14 @@
     {
       "geometry": "point",
       "extent": [
-        -9.500799926978342,
-        38.69999182111164,
-        87.11787343700276,
-        61.78824498120364
+        -4.612726902906631,
+        46.482565467941015,
+        83.13036885144618,
+        60.6179891892439
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(select way,railway,station,name as name,length(name) as len,(select 90+degrees(ST_Azimuth(ST_StartPoint(inter), ST_EndPoint(inter))) from (select ST_Intersection(r.way, ST_Buffer(p.way, 100)) as inter from planet_osm_line r where r.railway in ('rail', 'narrow_gauge','monorail','funicular') and r.way && ST_Buffer(p.way, 100) order by ST_Distance(r.way, p.way) limit 1) rr) as angle from planet_osm_point p where railway in ('station', 'halt') and (station is null or (station != 'subway' and station != 'disused'))) as stations",
+        "table": "(select way,railway,station,name as name,length(name) as len,(select 90+degrees(ST_Azimuth(ST_StartPoint(inter), ST_EndPoint(inter))) from (select ST_Intersection(r.way, ST_Buffer(p.way, 100)) as inter from planet_osm_line r where r.railway in ('rail', 'narrow_gauge','monorail','funicular','light_rail','narrow_gauge') and r.way && ST_Buffer(p.way, 100) order by ST_Distance(r.way, p.way) limit 1) rr) as angle from planet_osm_point p where railway in ('station', 'halt') and (station is null or (station != 'subway' and station != 'disused'))) as stations",
         "key_field": "",
         "geometry_field": "way",
         "extent_cache": "dynamic",
@@ -1279,14 +1279,14 @@
     {
       "geometry": "point",
       "extent": [
-        -9.500799926978342,
-        38.69999182111164,
-        87.11787343700276,
-        61.78824498120364
+        -4.612726902906631,
+        46.482565467941015,
+        83.13036885144618,
+        60.6179891892439
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "( SELECT way,  name, station\n  FROM planet_osm_point\n  WHERE (railway='station' OR aerialway='station')\n  AND disused IS NULL \n AND (station IN ('subway','monorail') OR aerialway='station')\n) AS data",
+        "table": "( SELECT \n way\n,  name, station\n  FROM planet_osm_point\n  WHERE (railway='station' OR aerialway='station' OR railway='halt')\n  AND disused IS NULL \n AND (station IN ('subway','monorail') OR aerialway='station')\n) AS data",
         "key_field": "",
         "geometry_field": "way",
         "extent_cache": "dynamic",

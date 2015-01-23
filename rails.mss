@@ -86,6 +86,16 @@
   dash/line-color: white;
   dash/line-dasharray: 8;
 }
+
+  .railway[railway="light_rail"][zoom>=10] {
+  casing/line-width: 2.5;
+  casing/line-color: #909090;
+    
+  dash/line-width: 1.5;
+  dash/line-color: white;
+  dash/line-dasharray: 8;
+}
+
   .railway[railway="funicular"][zoom>=10] {
   casing/line-width: 2.5;
   casing/line-color: #909090;
