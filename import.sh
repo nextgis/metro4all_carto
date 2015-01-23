@@ -5,6 +5,7 @@ psql -U trolleway -d gis -c "DROP TABLE planet_osm_point;"
 psql -U trolleway -d gis -c "DROP TABLE planet_osm_polygon;"
 psql -U trolleway -d gis -c "DROP TABLE planet_osm_roads;"
 
+psql -U trolleway -d gis -f functions.sql
 
 #How to write BBOX:
 #BBOX from http://boundingbox.klokantech.com/ - LEFT, BOTTOM, RIGHT, TOP (37.3644,55.6616,37.8535,55.8338)
