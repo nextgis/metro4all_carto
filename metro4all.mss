@@ -517,7 +517,7 @@ line-color:  @road_fill;
 }
 
 
-#subway_stations::subway[zoom>=10] {
+#subway_stations::subway[zoom>=16] {
  text-face-name:@sans;
  text-fill: #ff5555 * 0.6;
  text-halo-radius: 1.5;
@@ -529,4 +529,26 @@ line-color:  @road_fill;
   
  [zoom>=10]{ text-size: 7; }
  [zoom>=15]{ text-size: 15; }
+}
+
+#subway_stations_shift[zoom>=10][zoom<16] {
+ text-face-name:@sans;
+ text-fill: #ff5555 * 0.6;
+ text-halo-radius: 1.5;
+ text-name: "[name]";
+ text-halo-fill: #fff;
+  
+ [zoom<14] { text-allow-overlap:false;}
+ [zoom>=14] { text-allow-overlap:true;}
+  
+ [zoom>=10]{ text-size: 7; }
+ [zoom>=15]{ text-size: 15; }
+  
+    text-placement-type: simple;
+  text-dx: 5;
+  text-dy: 5;
+  text-placements: 'N';
+  [angle_offset_from_platform >= 45][angle_offset_from_platform < 135] { text-placements: 'E'; }
+  [angle_offset_from_platform >= 135][angle_offset_from_platform < 225] { text-placements: 'S'; }
+  [angle_offset_from_platform >= 225][angle_offset_from_platform < 315] { text-placements: 'W'; }
 }
