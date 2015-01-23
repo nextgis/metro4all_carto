@@ -105,33 +105,33 @@ line-color:  @road_fill;
     [network='МОСКОВСКИЙ МЕТРОПОЛИТЕН']
     {
   marker-width:15;
-  marker-file:url('img_m4all/wikimedia-subway/Mosmetro.svg');
+  marker-file:url('img_m4all/wikimedia-subway/msk_logo.svg');
     }
       [network='ПЕТЕРБУРГСКИЙ МЕТРОПОЛИТЕН']
     {
   marker-width:15;
-  marker-file:url('img_m4all/wikimedia-subway/Spb_metro_logo.svg');
+  marker-file:url('img_m4all/wikimedia-subway/spb_logo.svg');
     }
   
   [network='НИЖЕГОРОДСКИЙ МЕТРОПОЛИТЕН']
     {
   marker-width:15;
-  marker-file:url('img_m4all/wikimedia-subway/NNMetro.svg');
+  marker-file:url('img_m4all/wikimedia-subway/niz_logo.svg');
     }
    [network='КАЗАНСКИЙ МЕТРОПОЛИТЕН']
     {
   marker-width:15;
-  marker-file:url('img_m4all/wikimedia-subway/Kazan-metro-Logo.svg');
+  marker-file:url('img_m4all/wikimedia-subway/kzn_logo.svg');
     } 
    [network='САМАРСКИЙ МЕТРОПОЛИТЕН']
     {
   marker-width:130;
-  marker-file:url('img_m4all/wikimedia-subway/Metro-logo.svg');
+  marker-file:url('img_m4all/wikimedia-subway/sam_logo.svg');
     } 
      [network='ЕМУП «ЕКАТЕРИНБУРГСКИЙ МЕТРОПОЛИТЕН»']
     {
   marker-width:15;
-  marker-file:url('img_m4all/wikimedia-subway/Ekb_metro_logo.svg');
+  marker-file:url('img_m4all/wikimedia-subway/ekb_logo.svg');
     } 
       [network="НОВОСИБИРСКИЙ МЕТРОПОЛИТЕН"]
     {
@@ -163,7 +163,7 @@ line-color:  @road_fill;
         [network="МИНСКИЙ МЕТРОПОЛИТЕН"]
     {
   marker-width:15;
-  marker-file:url('img_m4all/wikimedia-subway/Minsk_metro_logo.svg');
+  marker-file:url('img_m4all/wikimedia-subway/min_logo.svg');
     }
   
   // METRO LOGOS EUROPE
@@ -177,18 +177,18 @@ line-color:  @road_fill;
         [network="WARSAW METRO"]
     {
   marker-width:15;
-  marker-file:url('img_m4all/wikimedia-subway/Warsaw_Metro_logo.svg');
+  marker-file:url('img_m4all/wikimedia-subway/waw_logo.svg');
     }
   
         [network="AMSTERDAM METRO"]
     {
   marker-width:15;
-  marker-file:url('img_m4all/amsterdam_metro_logo.jpg');
+  marker-file:url('img_m4all/wikimedia-subway/ams_logo.svg');
     } 
         [network="GLASGOW SUBWAY"]
     {
   marker-width:15;
-  marker-file:url('img_m4all/wikimedia-subway/Glasgow_Subway.svg');
+  marker-file:url('img_m4all/wikimedia-subway/gla_logo.svg');
     }   
     //METRO LOGOS ASIA
   /*
