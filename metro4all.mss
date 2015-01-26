@@ -135,10 +135,11 @@ line-color:  @road_fill;
     } 
       [network="НОВОСИБИРСКИЙ МЕТРОПОЛИТЕН"]
     {
-  marker-width:15;
-  marker-file:url('img_m4all/wikimedia-subway/Nsk_logoklkljjkl.png');
+  marker-width:26;
+  marker-file:url('img_m4all/wikimedia-subway/nsk_logo.svg');
     }
   
+ 
   
   //METRO LOGOS UA
       [network='КП "КИЇВСЬКИЙ МЕТРОПОЛІТЕН"']

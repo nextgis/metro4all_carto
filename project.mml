@@ -1283,7 +1283,7 @@
       "geometry": "point",
       "extent": [
         -4.612726902906631,
-        46.482565467941015,
+        46.20725206508608,
         83.13036885144618,
         60.6179891892439
       ],
@@ -1313,9 +1313,9 @@
     {
       "geometry": "point",
       "extent": [
-        6.148708596512542,
+        -4.612726902906631,
         46.20725206508608,
-        38.48192315176172,
+        83.13036885144618,
         60.6179891892439
       ],
       "Datasource": {
@@ -1323,8 +1323,8 @@
         "table": "( SELECT  \nCOALESCE(degrees(m4allShiftStationAwayPlaftorm(way)),0) AS angle_offset_from_platform,\nST_EndPoint(\nST_Rotate(\n\tST_MakeLine(\n\tST_SetSRID(way,900913) --left\n\t,\n\tST_SetSRID(ST_Point(ST_X(way)+250, ST_Y(way)),900913) --right\n\t) --makeline\n\t,\n\tCOALESCE(m4allShiftStationAwayPlaftorm(way),0)\n\t,\n\tway --center\n\t)\n\t)\n--я забыл про функцию project\n AS way,\n name, station\n  FROM planet_osm_point\n  WHERE (railway='station' OR aerialway='station')\n  AND disused IS NULL \n AND (station IN ('subway','monorail') OR aerialway='station')\n) AS data",
         "key_field": "",
         "geometry_field": "",
-        "extent_cache": "auto",
-        "extent": "684471.11,5813623.94,4283788.09,8538630.54",
+        "extent_cache": "dynamic",
+        "extent": "",
         "dbname": "gis",
         "host": "localhost",
         "port": "5432",
