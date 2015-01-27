@@ -440,7 +440,26 @@ line-color:  @road_fill;
     [zoom>16] { marker-width:@iconsize_aiga_16;} 
     }
 
- 
+  
+  
+  [amenity='museum'] {
+ 	marker-file:url('img_m4all/nicolasmollet/museum.png'); 
+    [zoom>15] { marker-width:@iconsize_aiga_15;}
+    [zoom>16] { marker-width:@iconsize_aiga_16;} 
+    }
+  
+  [amenity='arts_centre'] {
+ 	marker-file:url('img_m4all/nicolasmollet/museum.png'); 
+    [zoom>15] { marker-width:@iconsize_aiga_15;}
+    [zoom>16] { marker-width:@iconsize_aiga_16;} 
+    } 
+  
+  [amenity='zoo'] {
+ 	marker-file:url('img_m4all/nicolasmollet/zoo.png'); 
+    [zoom>15] { marker-width:@iconsize_aiga_15;}
+    [zoom>16] { marker-width:@iconsize_aiga_16;} 
+    } 
+  
   }
 
 
@@ -464,6 +483,11 @@ line-color:  @road_fill;
     ,[amenity='pharmacy']
     ,[amenity='embassy']
     ,[amenity='bus_station'] 
+    ,[amenity='hospital'] 
+    ,[amenity='zoo'] 
+    ,[amenity='museum'] 
+    ,[amenity='arts_centre'] 
+    ,[amenity='university'] 
     {
   
  //Подписи amenity
@@ -477,7 +501,7 @@ line-color:  @road_fill;
  text-dx: 10;
  text-placement-type: simple;
   
-    [zoom>18]
+    [zoom>17]
       {
        text-allow-overlap:true;
       }

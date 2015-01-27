@@ -1251,14 +1251,14 @@
     {
       "geometry": "point",
       "extent": [
-        -9.498222121439033,
-        38.77997938066311,
-        34.353645823818994,
-        61.78859298973552
+        37.08202167099231,
+        55.405819814365984,
+        44.57669869524629,
+        56.67339620736477
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(  SELECT way, COALESCE (operator, name) AS name, amenity \n  FROM planet_osm_point\n  WHERE amenity IS NOT NULL \n\nUNION\nSELECT ST_PointOnSurface(way) AS way, COALESCE(operator, name) AS name, amenity \n  FROM planet_osm_polygon\n  WHERE amenity IS NOT NULL\n) AS data",
+        "table": "(  SELECT way, COALESCE(operator, name) AS name, COALESCE(amenity,tourism) AS amenity \n  FROM planet_osm_point\n  WHERE amenity IS NOT NULL OR  tourism IS NOT NULL\n\nUNION\nSELECT ST_PointOnSurface(way) AS way, COALESCE(operator, name) AS name, COALESCE(amenity,tourism) AS amenity \n  FROM planet_osm_polygon\n  WHERE amenity IS NOT NULL OR  tourism IS NOT NULL\n) AS data",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "dynamic",
