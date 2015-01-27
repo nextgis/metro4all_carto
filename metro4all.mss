@@ -115,7 +115,7 @@ line-color:  @road_fill;
   
   [network='НИЖЕГОРОДСКИЙ МЕТРОПОЛИТЕН']
     {
-  marker-width:15;
+  marker-width:18;
   marker-file:url('img_m4all/wikimedia-subway/niz_logo.svg');
     }
    [network='КАЗАНСКИЙ МЕТРОПОЛИТЕН']
@@ -183,7 +183,7 @@ line-color:  @road_fill;
   
         [network="AMSTERDAM METRO"]
     {
-  marker-width:15;
+  marker-width:40;
   marker-file:url('img_m4all/wikimedia-subway/ams_logo.svg');
     } 
         [network="GLASGOW SUBWAY"]

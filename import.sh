@@ -55,9 +55,14 @@ rm samara.pbf
 
 #NN
 wget -N http://data.gis-lab.info/osm_dump/dump/latest/RU-NIZ.osm.pbf
-osmosis --read-pbf file=RU-NIZ.osm.pbf  --bounding-box top=56.4038 left=43.3197 bottom=56.1229 right=44.1542  --write-pbf nn.pbf
+osmosis --read-pbf file=RU-NIZ.osm.pbf  --bounding-box top=56.4038 left=43.77 bottom=56.1229 right=44.1542  --write-pbf nn.pbf
 osm2pgsql --append --multi-geometry --database gis --username trolleway   --style metro4all.style nn.pbf
 rm nn.pbf
+
+wget -O RU-NIZ-Volga.osm -N http://overpass.osm.rambler.ru/cgi/interpreter?data=relation%0A%20%20%5B%22water%22%3D%22river%22%5D%0A%20%20%2856.18492886719585%2C43.81622314453125%2C56.40516393682947%2C44.259796142578125%29%3B%0A%28._%3B%3E%3B%29%3B%0Aout%20meta%3B
+osm2pgsql --append --multi-geometry --database gis --username trolleway   --style metro4all.style RU-NIZ-Volga.osm
+
+exit 0
 
 #Kazan
 wget -N http://data.gis-lab.info/osm_dump/dump/latest/RU-TA.osm.pbf
