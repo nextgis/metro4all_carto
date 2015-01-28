@@ -193,12 +193,12 @@
 #place::small[type='village'][zoom>=13],
 #place::small[type='suburb'][zoom>=13],
 #place::small[type='hamlet'][zoom>=13],
-#place::small[type='neighbourhood'][zoom>=13] {
+#place::small[type='neighbourhood'][zoom>=7][zoom<15] {
   text-name:'[name]';
   text-face-name:@sans;
   text-placement:point;
   text-fill:@other_text;
-  text-size:10;
+  text-size:15;
   text-halo-fill:@other_halo;
   text-halo-radius:1;
   text-wrap-width: 30;

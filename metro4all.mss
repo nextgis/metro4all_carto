@@ -434,9 +434,15 @@ line-color:  @road_fill;
     [zoom>16] { marker-width:@iconsize_nm_16;}  
     }
 
-  [amenity='bus_station'] {
+
+  
+  }
+
+#amenity::priority14_icons[zoom>=14] {
+  
+    [amenity='bus_station'] {
  	marker-file:url('img_m4all/aiga/Aiga_bus_inv.svg'); 
-    [zoom>15] { marker-width:@iconsize_aiga_15;}
+    [zoom>14] { marker-width:@iconsize_aiga_15;}
     [zoom>16] { marker-width:@iconsize_aiga_16;} 
     }
 
@@ -444,27 +450,53 @@ line-color:  @road_fill;
   
   [amenity='museum'] {
  	marker-file:url('img_m4all/nicolasmollet/museum.png'); 
-    [zoom>15] { marker-width:@iconsize_aiga_15;}
+    [zoom>14] { marker-width:@iconsize_aiga_15;}
     [zoom>16] { marker-width:@iconsize_aiga_16;} 
     }
   
   [amenity='arts_centre'] {
  	marker-file:url('img_m4all/nicolasmollet/museum.png'); 
-    [zoom>15] { marker-width:@iconsize_aiga_15;}
+    [zoom>14] { marker-width:@iconsize_aiga_15;}
     [zoom>16] { marker-width:@iconsize_aiga_16;} 
     } 
   
   [amenity='zoo'] {
  	marker-file:url('img_m4all/nicolasmollet/zoo.png'); 
-    [zoom>15] { marker-width:@iconsize_aiga_15;}
+    [zoom>14] { marker-width:@iconsize_aiga_15;}
     [zoom>16] { marker-width:@iconsize_aiga_16;} 
     } 
   
   }
 
 
+#amenity::priority14_labels[zoom>=14]  {
+     [amenity='bus_station'] 
+    ,[amenity='zoo'] 
+    ,[amenity='museum'] 
+    ,[amenity='university'] 
+    {
+  
+ //Подписи amenity
+    
+ text-face-name:@sans_bold_italic;
+ text-fill: #aaaaaa * 0.6;
+ text-halo-radius: 1.5;
+ text-size: 10;
+ text-name: "[name]";
+ text-halo-fill: #fff;
+ text-allow-overlap:false;
+ text-dx: 10;
+ //text-placement-type: dummy;
+  
+    [zoom>17]
+      {
+       //shield-allow-overlap:true;
+      }
+}  
+}
 
-#amenity[zoom>16]  {
+
+#amenity::priority16[zoom>16]  {
 	 [amenity='bank']
     ,[amenity='atm']
     ,[amenity='fast_food']
@@ -482,12 +514,8 @@ line-color:  @road_fill;
     ,[amenity='social_centre']
     ,[amenity='pharmacy']
     ,[amenity='embassy']
-    ,[amenity='bus_station'] 
     ,[amenity='hospital'] 
-    ,[amenity='zoo'] 
-    ,[amenity='museum'] 
     ,[amenity='arts_centre'] 
-    ,[amenity='university'] 
     {
   
  //Подписи amenity
